@@ -17,3 +17,20 @@ if( x && y ){
 if( x || z ){
   console.log("Code runs");  // This block runs because x || y returns 220(Truthy)
 }
+
+// var y = #8454; // y pointing to address of the value 234
+
+// var z = y; 
+     
+// var z = #5411; // z pointing to a completely new address of the value 234
+     
+// // Changing the value of y
+// y = 23;
+// console.log(z);  // Returns 234, since z points to a new address in the memory so changes in y will not effect z
+
+
+function higherOrder(fn) {
+  fn();
+}
+   
+higherOrder(function() { console.log("Hello world") });  
